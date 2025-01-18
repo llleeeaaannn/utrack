@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# React Technical Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For this technical challenge you will be answering some technical background questions to gauge your ability to communicate technical issues, and also developing a small application with React components to gauge code style, library use and experience with React and JavaScript in general.
 
-## Available Scripts
+## Background Questions
 
-In the project directory, you can run:
+Please explain what is wrong with this code and what the observed behaviour might be in a component that included it.
 
-### `npm start`
+```
+this.setState({count: this.state.count+1})
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Can you please explain how Redux works, assuming your were talking to a non-technical audience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technical Challenge
 
-### `npm test`
+Please develop a single-screen application that allows a user to interactively filter a data set of users based on certain criteria, to narrow down the number of users. The app should present a set of interactive filters, a graph of matching users and a table of matching users. Changes to the filters should modify the contents of the graph and table in realtime.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Assume that your app would receive data in the following format:
 
-### `npm run build`
+```javascript
+export const Users = [
+  { id: '1', birthday: 3, spend: 1000, region: 'United States', gender: 'Female'},
+  { id: '2', birthday: 12, spend: 2000, region: 'APAC', gender: 'Female'},
+  { id: '3', birthday: 10, spend: 4000, region: 'Asia', gender: 'Female'},
+  { id: '4', birthday: 9, spend: 2000, region: 'Latin America', gender: 'Female'},
+...
+];
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You should generate a test file that has at least 1000 rows with users in this format and include this as instance data on your page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- id is unique and numeric sequential
+- birthday is a number between 1 and 12 (indicating month of birth)
+- spend is a number between 0 and 5000, indicating how much a customer has spent with the company in dollars
+- region is an enum of 'United States', 'Europe', 'APAC', or 'Latin America'
+- gender is 'Male', or 'Female'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The intention of this mini-application is to calculate the costs involved in giving a $5 coupon to each of these customers over the course of a year, if they received it on their birthday.
 
-### `npm run eject`
+### Requirements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Your choice of graphing library is up to you, but we can recommend chart.js as an option if you don't have a preference.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The below mockup shows an example of how this could look, with three interactive filters above (minimum spend, region and gender), and a graph below. A table is not shown but should be rendered below the graph. This visualisation is not prescriptive, so your can look different as long as the logic is correct.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Image]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The graph should redraw itself dynamically based on the UI state, so that users with spend less than minimum spend are filtered from the graph and table as the slider is interacted with. Similarly a selection in the region dropdown should filter the data set to just those users. Gender can be filtered by either male, female or both (i.e., no filter applied).
 
-## Learn More
+The graph should plot the count of users that remain after the filters, bucketed by their month of birth (the "monthly" line). A second line (labelled "cumulative" in the diagram above) should show the accumulated cost over the course of the year if every one of those users was given (and redeemed) a $5 discount. So if the "monthly" line was plotted at 10 and 12 for January and February, for example, the "cumulative" line would be plotted at $50 and $110 (22 × $5).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ES6 JavaScript is preferred for this project but not required.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please include documentation on how to run this project from scratch and view in a iOS or Android simulated device.
