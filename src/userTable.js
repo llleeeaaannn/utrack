@@ -14,6 +14,7 @@ const UserTable = ({ users }) => {
         </tr>
       </thead>
       <tbody>
+        {users.map((user) => (
         <tr>
           <td></td>
           <td></td>
@@ -21,6 +22,7 @@ const UserTable = ({ users }) => {
           <td></td>
           <td></td>
         </tr>
+        ))}
       </tbody>
     </table>
   )
