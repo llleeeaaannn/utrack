@@ -1,7 +1,7 @@
 const SpendSlider = ({ minSpend, setMinSpend }) => {
   return (
     <div>
-      <label>Youv set the Minimum Spend to {minSpend}</label>
+      <label>You've set the Minimum Spend to {minSpend}</label>
       <input
         type="range"
         min="0"

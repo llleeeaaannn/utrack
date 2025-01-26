@@ -1,5 +1,6 @@
 import Users from "./dataGenerator.js"
 import UserTable from "./userTable.js"
+import SpendSlider from "../sliders/spendSlider.js"
 import React, { useState } from 'react'
 
 function App() {
