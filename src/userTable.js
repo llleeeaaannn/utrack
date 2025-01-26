@@ -1,5 +1,4 @@
-
-
+export default UserTable
 
 const UserTable = ({ users }) => {
   return (
@@ -16,11 +15,11 @@ const UserTable = ({ users }) => {
       <tbody>
         {users.map((user) => (
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>1</td>
+          <td>Jan</td>
+          <td>1000</td>
+          <td>Europe</td>
+          <td>Male</td>
         </tr>
         ))}
       </tbody>
