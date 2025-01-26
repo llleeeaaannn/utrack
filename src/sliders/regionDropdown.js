@@ -1,5 +1,6 @@
 import { Regions } from "../data/constants.js"
 
+// Creates a Region dropdwon with an option for each value in the Regions array. Sets passed state based on selection.
 const RegionDropdown = ({ region, setRegion }) => {
   return (
     <div>

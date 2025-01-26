@@ -1,3 +1,4 @@
+// Creates Gender dropdown element. Sets passed state based on selected value.
 const GenderDropdown = ({ gender, setGender }) => {
   return (
     <div>

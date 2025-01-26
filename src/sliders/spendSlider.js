@@ -1,3 +1,4 @@
+// Creates Slider for the spend property. Sets passed state based on selected value
 const SpendSlider = ({ minSpend, setMinSpend }) => {
   return (
     <div>
