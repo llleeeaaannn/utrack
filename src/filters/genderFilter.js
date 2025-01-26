@@ -13,6 +13,8 @@ const GenderFilter = ({ gender, setGender }) => {
             backgroundColor: gender === g ? "blue" : "lightgray",
             color: gender === g ? "white" : "black",
             border: "1px solid black",
+            padding: "10px",
+            margin: "5px"
           }}
         >
           {g}

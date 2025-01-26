@@ -12,7 +12,9 @@ const RegionFilter = ({ region, setRegion }) => {
           style={{
               backgroundColor: region === r ? "blue" : "lightgray",
               color: region === r ? "white" : "black",
-              border: "1px solid black"
+              border: "1px solid black",
+              padding: "10px",
+              margin: "5px"
           }}
         >
           {r}
