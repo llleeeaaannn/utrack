@@ -1,4 +1,3 @@
-import React from "react"
 import { Line } from "react-chartjs-2"
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js"
 
@@ -103,7 +102,6 @@ const ResponsiveChart = ({ users }) => {
   };
 
   return <Line data={data} options={options} />
-
 }
 
 export default ResponsiveChart
