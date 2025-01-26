@@ -14,11 +14,11 @@ const UserTable = ({ users }) => {
       <tbody>
         {users.map((user) => (
         <tr>
-          <td>1</td>
-          <td>Jan</td>
-          <td>1000</td>
-          <td>Europe</td>
-          <td>Male</td>
+          <td>{ user.id }</td>
+          <td>{ user.birthday }</td>
+          <td>{ user.spend }</td>
+          <td>{ user.region }</td>
+          <td>{ user.gender }</td>
         </tr>
         ))}
       </tbody>
