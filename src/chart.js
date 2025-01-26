@@ -33,12 +33,14 @@ const ResponsiveChart = ({ users }) => {
         label: "users",
         borderColor: "blue",
         backgroundColor: "blue",
+        yAxisID: "y2"
       },
       {
         data: cumulativeCost,
         label: "cost",
         borderColor: "red",
         backgroundColor: "red",
+        yAxisID: "y1"
       }
     ]
   }
