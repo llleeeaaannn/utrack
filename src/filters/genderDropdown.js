@@ -1,15 +1,26 @@
-// Creates Gender dropdown element. Sets passed state based on selected value.
-const GenderDropdown = ({ gender, setGender }) => {
+// Creates Gender filter buttons. Sets passed state based on selected value.
+const genderButtons = ["All", "Male", "Female"];
+
+
+const GenderFilter = ({ gender, setGender }) => {
   return (
     <div>
-      <label>Gender is set to</label>
-      <select value={gender} onChange={(e) => setGender(e.target.value)}>
-        <option value="All">All</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select>
+      <h3>Filter by Gender</h3>
+      {genderButtons.map(g => (
+        <button
+          key={g}
+          onClick={() => setGender(g)}
+          style={{
+            backgroundColor: gender === g ? "blue" : "lightgray",
+            color: gender === g ? "white" : "black",
+            border: "1px solid black",
+          }}
+        >
+          {g}
+        </button>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default GenderDropdown
+export default GenderFilter;

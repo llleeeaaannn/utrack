@@ -1,7 +1,7 @@
 import Users from "./dataGenerator.js"
 import UserTable from "./userTable.js"
 import MinSpendSlider from "./filters/minSpendSlider.js"
-import GenderDropdown from "./filters/genderDropdown.js"
+import GenderFilter from "./filters/genderDropdown.js"
 import RegionDropdown from "./filters/regionDropdown.js"
 import ResponsiveChart from "./chart.js"
 import React, { useState, useEffect } from 'react'
@@ -38,7 +38,7 @@ function App() {
   return (
     <div>
       <MinSpendSlider minSpend={minSpend} setMinSpend={setMinSpend} />
-      <GenderDropdown gender={gender} setGender={setGender} />
+      <GenderFilter gender={gender} setGender={setGender} />
       <RegionDropdown region={region} setRegion={setRegion} />
 
       <ResponsiveChart users={filteredUsers} />
