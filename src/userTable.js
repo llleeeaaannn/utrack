@@ -1,4 +1,3 @@
-
 const UserTable = ({ users }) => {
   return (
     <table>
