@@ -24,7 +24,7 @@ const ResponsiveChart = ({ users }) => {
         label: "Users per Month",
         borderColor: "blue",
         backgroundColor: "blue",
-        pointRadius: 5,
+        pointRadius: 3,
         yAxisID: "y1"
       },
       {
@@ -32,7 +32,7 @@ const ResponsiveChart = ({ users }) => {
         label: "Cumulative Cost",
         borderColor: "red",
         backgroundColor: "red",
-        pointRadius: 5,
+        pointRadius: 3,
         yAxisID: "y2"
       }
     ]
