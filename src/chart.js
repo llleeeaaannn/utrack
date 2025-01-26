@@ -21,14 +21,14 @@ const ResponsiveChart = ({ users }) => {
     datasets: [
       {
         data: monthlyUsers,
-        label: "users",
+        label: "Users per Month",
         borderColor: "blue",
         backgroundColor: "blue",
         yAxisID: "y1"
       },
       {
         data: cumulativeCost,
-        label: "cost",
+        label: "Cumulative Cost",
         borderColor: "red",
         backgroundColor: "red",
         yAxisID: "y2"
@@ -42,11 +42,25 @@ const ResponsiveChart = ({ users }) => {
       y1: {
         type: "linear",
         position: "right",
+        title: {
+          display: true,
+          text: "Users Count"
+        },
       },
       y2: {
         type: "linear",
         position: "left",
-      }
+        title: {
+          display: true,
+          text: "Cumulative Cost"
+        },
+      },
+      x: {
+        title: {
+          display: true,
+          text: "Month"
+        },
+      },
     }
   };
 
