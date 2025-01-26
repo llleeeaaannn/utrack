@@ -1,4 +1,4 @@
-const GenderDropdown = (gender, setGender) => {
+const GenderDropdown = ({ gender, setGender }) => {
   return (
     <div>
       <label>Gender is set to</label>
