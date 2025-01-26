@@ -15,6 +15,21 @@ Chart.register(CategoryScale, LinearScale, PointElement, LineElement)
 const ReponsiveChart = ({ users }) => {
 
   // Define the charts data
+  const data = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [
+      {
+        label: "users",
+        borderColor: "blue",
+        backgroundColor: "blue",
+      },
+      {
+        label: "cost",
+        borderColor: "red",
+        backgroundColor: "red",
+      }
+    ]
+  }
 
   // Define chart options (title, legends..)
 
