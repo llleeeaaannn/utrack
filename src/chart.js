@@ -61,7 +61,7 @@ const ResponsiveChart = ({ users }) => {
   };
 
   // Return chart with the LINE component
-  return <Line data={data} />
+  return <Line data={data} options={options} />
 
 }
 
