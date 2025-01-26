@@ -25,6 +25,7 @@ const ResponsiveChart = ({ users }) => {
         borderColor: "blue",
         backgroundColor: "blue",
         pointRadius: 3,
+        tension: 0.25,
         yAxisID: "y1"
       },
       {
@@ -33,6 +34,7 @@ const ResponsiveChart = ({ users }) => {
         borderColor: "red",
         backgroundColor: "red",
         pointRadius: 3,
+        tension: 0.25,
         yAxisID: "y2"
       }
     ]
