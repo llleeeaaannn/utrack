@@ -12,8 +12,24 @@ const ResponsiveChart = ({ users }) => {
   const cumulativeCost = []
   let runningTotal = 0
   for (let i = 0; i < monthlyUsers.length; i++) {
-    runningTotal = runningTotal + (monthlyUsers[i] * 5)
-    cumulativeCost.push(runningTotal)
+    // Filter users born in month
+    const usersInMonth = users.filter(user => user.birthday - 1 === i)
+
+    // Begin monthly discount as 0
+    let totalDiscount = 0
+
+    // For each user in this month, add 5 to the total discount unless their spend is below 5 in which case we add their spend
+    usersInMonth.forEach(user => {
+      if (user.spend >= 5) {
+        totalDiscount += 5
+      } else {
+        totalDiscount += user.spend
+      }
+    })
+
+    // Add total monthly disocunt to running total and then add running total to cumulative cost (array with cost for each month cumulatively)
+    runningTotal += totalDiscount;
+    cumulativeCost.push(runningTotal);
   }
 
   const data = {
@@ -21,7 +37,7 @@ const ResponsiveChart = ({ users }) => {
     datasets: [
       {
         data: monthlyUsers,
-        label: "Users Count",
+        label: "User Count",
         borderColor: "blue",
         backgroundColor: "blue",
         pointRadius: 3,
