@@ -12,6 +12,7 @@ const ResponsiveChart = ({ users }) => {
   const cumulativeCost = []
   let runningTotal = 0
   for (let i = 0; i < monthlyUsers.length; i++) {
+
     // Filter users born in month
     const usersInMonth = users.filter(user => user.birthday - 1 === i)
 
@@ -62,7 +63,7 @@ const ResponsiveChart = ({ users }) => {
       legend: { position: "top" },
       title: {
         display: true,
-        text: "User Count & Cumulative Cost Over Time",
+        text: "User Count & Cumulative Discount Cost By Month",
       },
       tooltip: {
         enabled: true,
