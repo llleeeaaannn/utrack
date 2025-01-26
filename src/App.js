@@ -16,7 +16,7 @@ function App() {
   }, [minSpend]);
 
   useEffect(() => {
-    setFilteredUsers(Users.filter(user => user.gender === gender));
+    setFilteredUsers(Users.filter(user => gender === 'All' || user.gender === gender ));
   }, [gender]);
 
   return (
