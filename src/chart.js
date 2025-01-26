@@ -14,11 +14,15 @@ Chart.register(CategoryScale, LinearScale, PointElement, LineElement)
 // Potentially have 2 y axis (left + right) for clearer reading as cumilative values should be much higher
 const ReponsiveChart = ({ users }) => {
 
+  const monthlyUsers = Array(12).fill(0);
+  users.forEach(user => monthlyUsers[user.birthday - 1] + 1);
+
   // Define the charts data
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     datasets: [
       {
+        data: monthlyUsers,
         label: "users",
         borderColor: "blue",
         backgroundColor: "blue",
