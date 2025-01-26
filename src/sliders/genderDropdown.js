@@ -10,4 +10,4 @@ const GenderDropdown = (gender, setGender) => {
   )
 }
 
-export default genderDropdown
+export default GenderDropdown
