@@ -1,8 +1,8 @@
 import React from "react"
 import { Line } from "react-chartjs-2"
-import { Chart, CategoryScale, LinearScale, PointElement, LineElement } from "chart.js"
+import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js"
 
-Chart.register(CategoryScale, LinearScale, PointElement, LineElement)
+Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 const ResponsiveChart = ({ users }) => {
 
@@ -50,6 +50,7 @@ const ResponsiveChart = ({ users }) => {
       },
       tooltip: {
         mode: "index",
+        enabled: true,
         intersect: false,
       }
     },
