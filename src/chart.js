@@ -12,7 +12,7 @@ Chart.register(CategoryScale, LinearScale, PointElement, LineElement)
 // X axis is just the months
 
 // Potentially have 2 y axis (left + right) for clearer reading as cumilative values should be much higher
-const ReponsiveChart = ({ users }) => {
+const ResponsiveChart = ({ users }) => {
 
   const monthlyUsers = Array(12).fill(0);
   users.forEach(user => monthlyUsers[user.birthday - 1]++);
@@ -46,5 +46,8 @@ const ReponsiveChart = ({ users }) => {
   // Define chart options (title, legends..)
 
   // Return chart with the LINE component
+  return <Line data={data} />
 
 }
+
+export default ResponsiveChart
