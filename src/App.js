@@ -1,8 +1,8 @@
 import Users from "./dataGenerator.js"
 import UserTable from "./userTable.js"
-import SpendSlider from "./sliders/spendSlider.js"
-import GenderDropdown from "./sliders/genderDropdown.js"
-import RegionDropdown from "./sliders/regionDropdown.js"
+import SpendSlider from "./filters/spendSlider.js"
+import GenderDropdown from "./filters/genderDropdown.js"
+import RegionDropdown from "./filters/regionDropdown.js"
 import React, { useState, useEffect } from 'react'
 
 function App() {
