@@ -1,8 +1,8 @@
 import Users from "./dataGenerator.js"
 import UserTable from "./userTable.js"
 import MinSpendSlider from "./filters/minSpendSlider.js"
-import GenderFilter from "./filters/genderDropdown.js"
-import RegionDropdown from "./filters/regionDropdown.js"
+import GenderFilter from "./filters/genderFilter.js"
+import RegionDropdown from "./filters/regionFilter.js"
 import ResponsiveChart from "./chart.js"
 import React, { useState, useEffect } from 'react'
 

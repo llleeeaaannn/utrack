@@ -1,7 +1,6 @@
 // Creates Gender filter buttons. Sets passed state based on selected value.
 const genderButtons = ["All", "Male", "Female"];
 
-
 const GenderFilter = ({ gender, setGender }) => {
   return (
     <div>
