@@ -1,5 +1,3 @@
-export default Users
-
 const Regions = ['United States', 'APAC', 'Latin America', 'Europe']
 const Genders = ['Male', 'Female']
 
@@ -11,3 +9,5 @@ const Users = Array.from({ length: 1000}, (id) => ({
   region: Regions[Math.floor(Math.random() * Regions.length)],
   gender: Genders[Math.floor(Math.random() * Genders.length)]
 }))
+
+export default Users

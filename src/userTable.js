@@ -1,4 +1,3 @@
-export default UserTable
 
 const UserTable = ({ users }) => {
   return (
@@ -26,3 +25,5 @@ const UserTable = ({ users }) => {
     </table>
   )
 }
+
+export default UserTable
