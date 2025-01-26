@@ -59,6 +59,9 @@ const ResponsiveChart = ({ users }) => {
           display: true,
           text: "Users Count"
         },
+        ticks: {
+          callback: (value) => value.toFixed(0), // This forces the value on the y axis to be whole as the count axis was sometimes showing decimals
+      },
       },
       y2: {
         type: "linear",
