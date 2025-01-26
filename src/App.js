@@ -5,9 +5,12 @@ import React, { useState } from 'react'
 function App() {
 
   const [users, setUsers] = useState(Users);
+  const [filteredUsers, setFilteredUsers] = useState(Users);
 
   return (
     <div>
+      <UserTable users={users} />
+
       <UserTable users={users} />
     </div>
   );
