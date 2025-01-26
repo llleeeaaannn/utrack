@@ -31,6 +31,7 @@ function App() {
 
       <SpendSlider minSpend={minSpend} setMinSpend={setMinSpend} />
       <GenderDropdown gender={gender} setGender={setGender} />
+      <RegionDropdown region={region} setRegion={setRegion} />
 
       <UserTable users={filteredUsers} />
     </div>
