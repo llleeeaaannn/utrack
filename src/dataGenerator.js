@@ -1,5 +1,4 @@
-const Regions = ['United States', 'APAC', 'Latin America', 'Europe']
-const Genders = ['Male', 'Female']
+import { Regions, Genders } from "./data/constants.js"
 
 // Generates an array of 1,000 length
 const Users = Array.from({ length: 1000}, ( unusedElement, id) => ({

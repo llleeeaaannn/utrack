@@ -1,4 +1,4 @@
-const Regions = ['United States', 'APAC', 'Latin America', 'Europe']
+import { Regions } from "../data/constants.js"
 
 const RegionDropdown = ({ region, setRegion }) => {
   return (
