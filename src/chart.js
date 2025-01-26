@@ -24,6 +24,7 @@ const ResponsiveChart = ({ users }) => {
         label: "Users per Month",
         borderColor: "blue",
         backgroundColor: "blue",
+        pointRadius: 5,
         yAxisID: "y1"
       },
       {
@@ -31,6 +32,7 @@ const ResponsiveChart = ({ users }) => {
         label: "Cumulative Cost",
         borderColor: "red",
         backgroundColor: "red",
+        pointRadius: 5,
         yAxisID: "y2"
       }
     ]
@@ -38,6 +40,17 @@ const ResponsiveChart = ({ users }) => {
 
   const options = {
     responsive: true,
+    plugins: {
+      legend: { position: "top" },
+      title: {
+        display: true,
+        text: "User Count & Cumulative Cost Over Time",
+      },
+      tooltip: {
+        mode: "index",
+        intersect: false,
+      }
+    },
     scales: {
       y1: {
         type: "linear",
