@@ -13,17 +13,38 @@ function App() {
   const [users, setUsers] = useState(Users);
   const [filteredUsers, setFilteredUsers] = useState(Users);
 
-  useEffect(() => {
-    setFilteredUsers(Users.filter(user => user.spend >= minSpend));
-  }, [minSpend]);
+  // useEffect(() => {
+  //   setFilteredUsers(Users.filter(user => user.spend >= minSpend));
+  // }, [minSpend]);
+  //
+  // useEffect(() => {
+  //   setFilteredUsers(Users.filter(user => gender === 'All' || user.gender === gender ));
+  // }, [gender]);
+  //
+  // useEffect(() => {
+  //   setFilteredUsers(Users.filter(user => region === 'All' || user.region === region ));
+  // }, [region]);
 
   useEffect(() => {
-    setFilteredUsers(Users.filter(user => gender === 'All' || user.gender === gender ));
-  }, [gender]);
+    function filterBySpend(user) {
+      return user.spend >= minSpend
+    }
 
-  useEffect(() => {
-    setFilteredUsers(Users.filter(user => region === 'All' || user.region === region ));
-  }, [region]);
+    function filterByGender(user) {
+      return gender === "All" || user.gender === gender
+    }
+
+    function filterByRegion(user) {
+      return region === "All" || user.region === region
+    }
+
+    const filtered = Users
+      .filter(filterBySpend)
+      .filter(filterByGender)
+      .filter(filterByRegion)
+
+    setFilteredUsers(filtered)
+  }, [minSpend, gender, region])
 
   return (
     <div>
