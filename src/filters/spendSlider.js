@@ -1,5 +1,5 @@
-// Creates Slider for the spend property. Sets passed state based on selected value
-const SpendSlider = ({ minSpend, setMinSpend }) => {
+// Creates Minimum Slider for the spend property. Sets passed state based on selected value
+const MinSpendSlider = ({ minSpend, setMinSpend }) => {
   return (
     <div>
       <label>You've set the Minimum Spend to {minSpend}</label>
@@ -15,4 +15,4 @@ const SpendSlider = ({ minSpend, setMinSpend }) => {
   );
 };
 
-export default SpendSlider;
+export default MinSpendSlider;
