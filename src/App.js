@@ -8,6 +8,7 @@ function App() {
 
   const [minSpend, setMinSpend] = useState(0);
   const [gender, setGender] = useState('All');
+  const [region, setRegion] = useState('All');
   const [users, setUsers] = useState(Users);
   const [filteredUsers, setFilteredUsers] = useState(Users);
 
@@ -19,11 +20,13 @@ function App() {
     setFilteredUsers(Users.filter(user => gender === 'All' || user.gender === gender ));
   }, [gender]);
 
+  useEffect(() => {
+    setFilteredUsers(Users.filter(user => region === 'All' || user.region === region ));
+  }, [region]);
+
   return (
     <div>
       {/* <UserTable users={users} /> */}
-
-
 
       <SpendSlider minSpend={minSpend} setMinSpend={setMinSpend} />
       <GenderDropdown gender={gender} setGender={setGender} />
