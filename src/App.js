@@ -8,11 +8,15 @@ function App() {
   const [users, setUsers] = useState(Users);
   const [filteredUsers, setFilteredUsers] = useState(Users);
 
+  useEffect(() => {
+    setFilteredUsers(Users.filter(user => user.spend >= minSpend));
+  }, [minSpend]);
+
   return (
     <div>
       <UserTable users={users} />
 
-      <UserTable users={users} />
+      <UserTable users={filteredUsers} />
     </div>
   );
 }
