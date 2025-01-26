@@ -15,7 +15,7 @@ Chart.register(CategoryScale, LinearScale, PointElement, LineElement)
 const ReponsiveChart = ({ users }) => {
 
   const monthlyUsers = Array(12).fill(0);
-  users.forEach(user => monthlyUsers[user.birthday - 1] + 1);
+  users.forEach(user => monthlyUsers[user.birthday - 1]++);
 
   // Define the charts data
   const data = {
