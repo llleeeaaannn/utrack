@@ -21,7 +21,7 @@ const ResponsiveChart = ({ users }) => {
     datasets: [
       {
         data: monthlyUsers,
-        label: "Users per Month",
+        label: "Users Count",
         borderColor: "blue",
         backgroundColor: "blue",
         pointRadius: 3,
@@ -49,10 +49,12 @@ const ResponsiveChart = ({ users }) => {
         text: "User Count & Cumulative Cost Over Time",
       },
       tooltip: {
-        mode: "index",
         enabled: true,
         intersect: false,
       }
+    },
+    interaction: {
+      mode: "index",
     },
     scales: {
       y1: {
