@@ -13,18 +13,6 @@ function App() {
   const [users, setUsers] = useState(Users);
   const [filteredUsers, setFilteredUsers] = useState(Users);
 
-  // useEffect(() => {
-  //   setFilteredUsers(Users.filter(user => user.spend >= minSpend));
-  // }, [minSpend]);
-  //
-  // useEffect(() => {
-  //   setFilteredUsers(Users.filter(user => gender === 'All' || user.gender === gender ));
-  // }, [gender]);
-  //
-  // useEffect(() => {
-  //   setFilteredUsers(Users.filter(user => region === 'All' || user.region === region ));
-  // }, [region]);
-
   useEffect(() => {
     function filterBySpend(user) {
       return user.spend >= minSpend
@@ -48,8 +36,6 @@ function App() {
 
   return (
     <div>
-      {/* <UserTable users={users} /> */}
-
       <SpendSlider minSpend={minSpend} setMinSpend={setMinSpend} />
       <GenderDropdown gender={gender} setGender={setGender} />
       <RegionDropdown region={region} setRegion={setRegion} />
