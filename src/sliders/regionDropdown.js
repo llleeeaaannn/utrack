@@ -13,4 +13,4 @@ const RegionDropdown = ({ region, setRegion }) => {
   )
 }
 
-export default GenderDropdown
+export default RegionDropdown
