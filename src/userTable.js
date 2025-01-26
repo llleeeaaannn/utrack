@@ -6,11 +6,11 @@ const UserTable = ({ users }) => {
     <table>
       <thead>
         <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
+          <th>ID</th>
+          <th>Birthday Month</th>
+          <th>Spend</th>
+          <th>Region</th>
+          <th>Gender</th>
         </tr>
       </thead>
       <tbody>
