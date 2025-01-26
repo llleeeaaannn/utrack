@@ -6,6 +6,7 @@ const SpendSlider = ({ minSpend, setMinSpend }) => {
         type="range"
         min="0"
         max="5000"
+        step="100"
         value={minSpend}
         onChange={(e) => setMinSpend(Number(e.target.value))}
       />
