@@ -1,10 +1,11 @@
 import Users from "./dataGenerator.js"
 import UserTable from "./userTable.js"
 import SpendSlider from "../sliders/spendSlider.js"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function App() {
 
+  const [minSpend, setMinSpend] = useState(0);
   const [users, setUsers] = useState(Users);
   const [filteredUsers, setFilteredUsers] = useState(Users);
 
@@ -16,6 +17,9 @@ function App() {
     <div>
       <UserTable users={users} />
 
+
+
+      <SpendSlider minSpend={minSpend} setMinSpend={setMinSpend} />
       <UserTable users={filteredUsers} />
     </div>
   );
