@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 function App() {
 
   const [minSpend, setMinSpend] = useState(0);
-  const [gender, setGender] = useState('Male');
+  const [gender, setGender] = useState('All');
   const [users, setUsers] = useState(Users);
   const [filteredUsers, setFilteredUsers] = useState(Users);
 
