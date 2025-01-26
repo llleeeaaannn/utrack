@@ -1,6 +1,6 @@
 import Users from "./dataGenerator.js"
 import UserTable from "./userTable.js"
-import useState from 'react'
+import React, { useState } from 'react'
 
 function App() {
 
