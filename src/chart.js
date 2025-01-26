@@ -33,19 +33,32 @@ const ResponsiveChart = ({ users }) => {
         label: "users",
         borderColor: "blue",
         backgroundColor: "blue",
-        yAxisID: "y2"
+        yAxisID: "y1"
       },
       {
         data: cumulativeCost,
         label: "cost",
         borderColor: "red",
         backgroundColor: "red",
-        yAxisID: "y1"
+        yAxisID: "y2"
       }
     ]
   }
 
   // Define chart options (title, legends..)
+  const options = {
+    responsive: true,
+    scales: {
+      y1: {
+        type: "linear",
+        position: "right",
+      },
+      y2: {
+        type: "linear",
+        position: "left",
+      }
+    }
+  };
 
   // Return chart with the LINE component
   return <Line data={data} />
