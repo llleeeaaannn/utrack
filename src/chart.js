@@ -30,7 +30,7 @@ const ResponsiveChart = ({ users }) => {
       },
       {
         data: cumulativeCost,
-        label: "Cumulative Cost",
+        label: "Cumulative Cost in €",
         borderColor: "red",
         backgroundColor: "red",
         pointRadius: 3,
@@ -70,7 +70,7 @@ const ResponsiveChart = ({ users }) => {
         position: "left",
         title: {
           display: true,
-          text: "Cumulative Cost"
+          text: "Cumulative Cost in €"
         },
       },
       x: {
